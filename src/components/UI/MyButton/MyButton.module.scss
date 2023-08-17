@@ -1,0 +1,14 @@
+.MyButton {
+  padding: 5px 20px;
+  background: rgb(71, 125, 133);
+  font: 400 20px / calc(20 / 14) sans-serif;
+  color: #fff;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(10, 73, 83);
+  }
+}

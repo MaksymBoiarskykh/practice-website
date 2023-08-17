@@ -1,0 +1,33 @@
+.user {
+  &Block {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #333333;
+    box-shadow: 0px 0px 20px rgba(203, 203, 203, 0.25);
+    border-radius: 10px;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  &Caption {
+    font: 600 22px / calc(20 / 14) sans-serif;
+    min-height: 40px;
+    flex-grow: 1;
+  }
+
+  &Picture {
+    padding: 20px 0;
+    img {
+      width: 130px;
+      border-radius: 50%;
+    }
+  }
+
+  &Location {
+    font: 500 19px / calc(15 / 14) sans-serif;
+    margin-bottom: 15px;
+  }
+}

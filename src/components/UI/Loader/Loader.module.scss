@@ -1,0 +1,20 @@
+.Loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 3px solid rgb(37, 91, 91);
+  &Block {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    animation: rotate 1s infinite linear;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

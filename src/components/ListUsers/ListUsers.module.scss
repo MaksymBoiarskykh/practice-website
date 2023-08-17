@@ -1,0 +1,23 @@
+.block {
+  padding: 20px 30px;
+}
+
+.listUsers {
+  @media (min-width: 576px) {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.title {
+  grid-column: 3 / span 4;
+}
