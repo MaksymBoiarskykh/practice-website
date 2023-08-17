@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/practice-website-gh-pages/static/css/main.cf1d9237.css",
+    "main.js": "/practice-website-gh-pages/static/js/main.ac7a4925.js",
+    "index.html": "/practice-website-gh-pages/index.html",
+    "main.cf1d9237.css.map": "/practice-website-gh-pages/static/css/main.cf1d9237.css.map",
+    "main.ac7a4925.js.map": "/practice-website-gh-pages/static/js/main.ac7a4925.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf1d9237.css",
+    "static/js/main.ac7a4925.js"
+  ]
+}
