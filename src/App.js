@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Header } from "./components/Header";
 import { AppRouter } from "./components/AppRouter";
 import { themeContext } from "./context/themeContext";
@@ -9,10 +9,10 @@ export const App = () => {
 
   return (
     <themeContext.Provider value={{ theme, setTheme }}>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <AppRouter />
-      </BrowserRouter>
+      </HashRouter>
     </themeContext.Provider>
   );
 };
