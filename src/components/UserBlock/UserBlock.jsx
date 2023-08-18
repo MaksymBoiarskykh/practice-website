@@ -1,12 +1,9 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyButton } from "../UI/MyButton/MyButton";
 import style from "./UserBlock.module.scss";
-import { usersContext } from "../../context/usersContext";
 
 export const UserBlock = ({ user }) => {
   const navigate = useNavigate();
-  const { setUserFromList } = useContext(usersContext);
 
   return (
     <li>
@@ -24,7 +21,7 @@ export const UserBlock = ({ user }) => {
         <MyButton
           onClick={() => {
             navigate(`/users/${user.name.first}${user.name.last}`);
-            setUserFromList(user);
+            localStorage.setItem("user", JSON.stringify(user));
           }}
         >
           Show info

@@ -1,21 +1,34 @@
-import { useContext } from "react";
-import { usersContext } from "../context/usersContext";
+import { UserInfo } from "../components/UserInfo/UserInfo";
+import { FiPhone, FiAtSign, FiUser, FiNavigation } from "react-icons/fi";
 
 export const IdUserPage = () => {
-  const { userFromList } = useContext(usersContext);
-  console.log(userFromList);
+  const user = JSON.parse(localStorage.getItem("user"));
+  const data = [
+    {
+      value: "name",
+      name: <FiUser />,
+      only: ["first", "last"],
+    },
+    {
+      value: "email",
+      name: <FiAtSign />,
+      only: [""],
+    },
+    {
+      value: "phone",
+      name: <FiPhone />,
+      only: [""],
+    },
+    {
+      value: "location",
+      name: <FiNavigation />,
+      only: ["city", "country"],
+    },
+  ];
+
   return (
-    <div>
-      <div>
-        full name: {userFromList.name.first} {userFromList.name.last}
-      </div>
-      <div>
-        {userFromList.location.country}, {userFromList.location.city}
-      </div>
-      <div>email: {userFromList.email}</div>
-      <div>phone: {userFromList.phone}</div>
-      <div></div>
-      <img src={userFromList.picture.large}></img>
+    <div className="container">
+      <UserInfo user={user} data={data} />
     </div>
   );
 };

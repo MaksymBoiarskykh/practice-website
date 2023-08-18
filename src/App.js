@@ -2,16 +2,17 @@ import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header";
 import { AppRouter } from "./components/AppRouter";
-import { usersContext } from "./context/usersContext";
+import { themeContext } from "./context/themeContext";
 
 export const App = () => {
-  const [userFromList, setUserFromList] = useState({});
+  const [theme, setTheme] = useState("light");
+
   return (
-    <usersContext.Provider value={{ userFromList, setUserFromList }}>
+    <themeContext.Provider value={{ theme, setTheme }}>
       <BrowserRouter>
         <Header />
         <AppRouter />
       </BrowserRouter>
-    </usersContext.Provider>
+    </themeContext.Provider>
   );
 };
