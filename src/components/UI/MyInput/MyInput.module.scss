@@ -5,5 +5,11 @@
   border-radius: 10px;
   padding: 5px 30px;
   font: 400 22px / calc(20 / 14) sans-serif;
-  color: rgb(10, 73, 83);
+  color: #504f4f;
+  margin: 5px;
+  width: 90%;
+
+  @media (min-width: 768px) {
+    width: none;
+  }
 }

@@ -5,7 +5,7 @@ import { About } from "../pages/About";
 
 export const AppRouter = () => (
   <Routes>
-    <Route path="/" element={<About />} />
+    <Route path="/" element={<Users />} />
     <Route path="/about" element={<About />} />
     <Route path="/users" element={<Users />} />
     <Route path="/users/:id" element={<IdUserPage />} />

@@ -3,39 +3,13 @@
   border-bottom: 2px solid rgb(10, 73, 83);
   background: rgb(242, 245, 246);
   border-radius: 10px;
-  padding: 8px 50px;
+  padding: 8px 30px;
   font: 400 22px / calc(20 / 14) sans-serif;
-  color: rgb(99, 109, 110);
-}
+  color: #504f4f;
+  margin: 5px;
+  width: 90%;
 
-.select {
-  position: relative;
-  min-width: 220px;
-  height: 100%;
-  font: 400 20px / calc(20 / 14) sans-serif;
-  color: #fff;
-
-  li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #fff;
-    background: rgb(71, 125, 133);
-    width: 100%;
-    border-radius: 10px;
-
-    .active {
-      background: rgb(17, 70, 78);
-    }
-  }
-
-  ul {
-    padding: 0;
-    display: none;
-    width: 100%;
-  }
-
-  .show {
-    position: absolute;
-    display: block;
-    top: 100;
+  @media (min-width: 768px) {
+    width: none;
   }
 }

@@ -1,9 +1,13 @@
-import { UserInfo } from "../components/UserInfo/UserInfo";
+import { useSelector } from "react-redux";
 import { FiPhone, FiAtSign, FiUser, FiNavigation } from "react-icons/fi";
+import { UserInfo } from "../components/UI/UserInfo/UserInfo";
 
 export const IdUserPage = () => {
+  const theme = useSelector((state) => state.theme.value);
   const user = JSON.parse(localStorage.getItem("user"));
-  const data = [
+
+  // it's for taking only nessosary data from api result
+  const param = [
     {
       value: "name",
       name: <FiUser />,
@@ -23,12 +27,15 @@ export const IdUserPage = () => {
       value: "location",
       name: <FiNavigation />,
       only: ["city", "country"],
+      symbol: ",",
     },
   ];
 
   return (
-    <div className="container">
-      <UserInfo user={user} data={data} />
-    </div>
+    <main className={`App ${theme}`}>
+      <div className="container">
+        <UserInfo user={user} param={param} />
+      </div>
+    </main>
   );
 };

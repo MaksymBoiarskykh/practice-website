@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { MyButton } from "../UI/MyButton/MyButton";
+import { MyButton } from "../MyButton/MyButton";
 import style from "./UserBlock.module.scss";
 
 export const UserBlock = ({ user }) => {

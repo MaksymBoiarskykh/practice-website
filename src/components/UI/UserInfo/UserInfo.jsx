@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { searchInObject } from "../../utils/searchInObject";
+import { searchInObject } from "../../../utils/searchInObject";
 import style from "./UserInfo.module.scss";
 
-export const UserInfo = ({ user, data }) => {
-  const [content, setContent] = useState([]);
+export const UserInfo = ({ user, param }) => {
+  const [content, setContent] = useState({ value: [], symbolBetween: "" });
 
   const showInfo = (info) => {
     const resultArr = searchInObject(user[info.value], info.only);
-    setContent([...resultArr]);
+    setContent({ value: [...resultArr], symbolBetween: info.symbol || "" });
   };
 
   return (
@@ -17,12 +17,14 @@ export const UserInfo = ({ user, data }) => {
           <img src={user.picture.large} />
         </div>
         <ul className={style.InfoBlockResult}>
-          {content.map((item, index) => (
-            <li key={index}>{item}</li>
+          {content.value.map((item, index) => (
+            <li key={index}>
+              {index > 0 && content.symbolBetween} {item}
+            </li>
           ))}
         </ul>
         <ul className={style.InfoBlockContent}>
-          {data.map((item) => (
+          {param.map((item) => (
             <li
               onMouseEnter={() => showInfo(item)}
               value={item.value}

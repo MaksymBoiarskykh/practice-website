@@ -8,13 +8,13 @@ export const FilterBlock = ({ param, setParam }) => {
       <MyInput
         value={param.find}
         onChange={(e) => setParam({ ...param, find: e.target.value })}
-        placeholder="print name or surname"
+        placeholder="print name"
       />
 
       <MySelect
         value={param.sort}
         onChange={(e) => setParam({ ...param, sort: e.target.value })}
-        defualtValue="sort by..."
+        defualtValue="sort by default"
         options={[
           { value: "first", name: "sort by name" },
           { value: "last", name: "sort by surname" },
@@ -22,23 +22,14 @@ export const FilterBlock = ({ param, setParam }) => {
       />
 
       <MySelect
-        value={param.sort}
+        value={param.gender}
         onChange={(e) => setParam({ ...param, gender: e.target.value })}
-        defualtValue="choose gender"
+        defualtValue="all people"
         options={[
           { value: "male", name: "only man" },
           { value: "female", name: "only woman" },
         ]}
       />
-
-      {/* <CustomSelect
-        onChange={() => setParam({ ...param, gender: e.target.value })}
-        defualtValue="choose gender"
-        options={[
-          { value: "male", name: "only man" },
-          { value: "female", name: "only woman" },
-        ]}
-      /> */}
     </div>
   );
 };

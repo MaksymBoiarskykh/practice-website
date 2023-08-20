@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-// sort
+// sort data
 export const useSortedData = (data, sort) => {
   const sortedData = useMemo(() => {
     if (sort) {
@@ -13,13 +13,15 @@ export const useSortedData = (data, sort) => {
   return sortedData;
 };
 
-// search
+// search data
 export const useFiltering = (data, sort, query) => {
   const sortedData = useSortedData(data, sort);
 
   const sortedAndSearchedData = useMemo(() => {
-    return sortedData.filter((user) =>
-      user.name.first.toLowerCase().includes(query.toLowerCase())
+    return sortedData.filter(
+      (user) =>
+        user.name.first.toLowerCase().includes(query.toLowerCase()) ||
+        user.name.last.toLowerCase().includes(query.toLowerCase())
     );
   }, [query, sortedData]);
 

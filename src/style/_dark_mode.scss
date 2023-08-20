@@ -1,0 +1,22 @@
+.darkTheme {
+  background: #252323;
+
+  input,
+  select {
+    background: #232323;
+  }
+
+  * {
+    color: #c8c5c5;
+  }
+
+  svg {
+    * {
+      color: rgb(162, 230, 240);
+    }
+  }
+
+  button {
+    background: rgb(10, 73, 83);
+  }
+}

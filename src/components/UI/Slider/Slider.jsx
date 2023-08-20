@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { SliderButton } from "../SliderButton/SliderButton";
 import "swiper/scss";
 import style from "./Slider.module.scss";
@@ -7,10 +8,10 @@ export const Slider = ({ data }) => {
   return (
     <Swiper className={style.Slider} spaceBetween={25} slidesPerView={1.3}>
       <SliderButton position="left">
-        <i className="large material-icons">arrow_back</i>
+        <FiArrowLeft />
       </SliderButton>
       <SliderButton position="right">
-        <i className="large material-icons">arrow_forward</i>
+        <FiArrowRight />
       </SliderButton>
 
       {data.map((item, index) => (

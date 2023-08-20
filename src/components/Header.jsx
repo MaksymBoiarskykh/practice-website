@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navigation } from "./UI/Navigation/Navigation";
 import { Burger } from "./UI/Burger/Burger";
+import { ThemeBtn } from "./UI/ThemeButton/ThemeBtn";
 
 export const Header = () => {
   const links = [
@@ -18,6 +19,8 @@ export const Header = () => {
           status={activeMenu}
           changeStatus={setActiveMenu}
         />
+
+        <ThemeBtn />
       </div>
     </header>
   );

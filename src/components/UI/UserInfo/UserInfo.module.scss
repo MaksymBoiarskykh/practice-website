@@ -1,7 +1,7 @@
 .InfoBlock {
   width: 100%;
   max-width: 700px;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
   padding: 20px 30px;
   -webkit-box-shadow: 10px 0px 97px 30px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 10px 0px 97px 30px rgba(0, 0, 0, 0.12);
@@ -23,12 +23,17 @@
   }
 
   &Result {
+    color: rgba(10, 73, 83);
     display: flex;
+    justify-content: center;
     height: 30px;
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
-    justify-content: center;
+
+    @media (min-width: 576px) {
+      font-size: 30px;
+    }
 
     li {
       margin: 0 3px;
@@ -38,10 +43,14 @@
   &Content {
     display: flex;
     justify-content: space-around;
-    font-size: 30px;
+    font-size: 25px;
     padding: 30px 0;
     font-weight: 600;
     color: green;
+
+    @media (min-width: 576px) {
+      font-size: 30px;
+    }
 
     li:hover {
       color: rgb(10, 73, 83);

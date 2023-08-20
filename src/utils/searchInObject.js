@@ -1,3 +1,5 @@
+// i use this function to get all values ​​of random structure object
+// Values ​​must match parameters
 export const searchInObject = (node, onlyValues, arr = []) => {
   if (typeof node === "object") {
     for (const key in node) {

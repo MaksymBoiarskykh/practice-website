@@ -1,4 +1,4 @@
-import { UserBlock } from "../UserBlock/UserBlock";
+import { UserBlock } from "../UI/UserCard/UserBlock";
 import style from "./ListUsers.module.scss";
 
 export const ListUsers = ({ list }) => {
