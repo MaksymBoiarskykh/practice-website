@@ -9,7 +9,7 @@ export const ThemeBtn = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.value);
 
-  const changeTheme = () => {
+  const changeTheme = async () => {
     theme === "ligthTheme"
       ? dispatch(darkThemeReducer())
       : dispatch(ligthThemeReducer());

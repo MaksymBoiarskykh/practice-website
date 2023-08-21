@@ -1,0 +1,46 @@
+.Post {
+  margin: 5px 0;
+  width: 100%;
+  font-size: 23px;
+  color: #c8c5c5;
+  cursor: pointer;
+
+  div {
+    padding: 20px;
+    // border: 1px solid black;
+    border-radius: 5px;
+  }
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+  background: rgb(56 118 127);
+
+  span {
+    flex-grow: 1;
+  }
+
+  svg {
+    font-size: 40px;
+    margin-left: 15px;
+    transition: all 0.3s;
+  }
+}
+
+.Body {
+  display: none;
+  transition: all 0.3s;
+}
+
+.Active {
+  .Body {
+    display: block;
+    margin: 0 0 3px 0;
+    background: rgb(56 118 127);
+  }
+
+  svg {
+    transform: rotate(135deg);
+  }
+}
