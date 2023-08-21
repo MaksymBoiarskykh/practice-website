@@ -1,9 +1,14 @@
 .Post {
-  margin: 5px 0;
+  margin: 5px auto;
   width: 100%;
-  font-size: 23px;
+  font-size: 17px;
   color: #c8c5c5;
   cursor: pointer;
+
+  @media (min-width: 576px) {
+    font-size: 23px;
+    width: 85%;
+  }
 
   div {
     padding: 20px;
@@ -22,9 +27,14 @@
   }
 
   svg {
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 15px;
     transition: all 0.3s;
+    min-width: 40px;
+
+    @media (min-width: 576px) {
+      font-size: 40px;
+    }
   }
 }
 

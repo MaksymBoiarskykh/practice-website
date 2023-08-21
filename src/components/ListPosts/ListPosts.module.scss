@@ -4,12 +4,17 @@
 
 .SeeMore {
   width: 100%;
-  font-size: 25px;
+  font-size: 17px;
   text-align: center;
-  background: rgb(80, 145, 207);
+  background: rgb(170, 20, 20);
   color: #fff;
   border-radius: 5px;
   padding: 10px;
   margin: 10px auto;
   cursor: pointer;
+
+  @media (min-width: 576px) {
+    font-size: 25px;
+    width: 85%;
+  }
 }
