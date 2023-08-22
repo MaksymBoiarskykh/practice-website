@@ -1,8 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  ligthThemeReducer,
-  darkThemeReducer,
-} from "../../../store/themeReducer";
+import { lightTheme, darkTheme } from "../../../store/themeSlice";
 import style from "./ThemeButton.module.scss";
 
 export const ThemeBtn = () => {
@@ -10,9 +7,7 @@ export const ThemeBtn = () => {
   const theme = useSelector((state) => state.theme.value);
 
   const changeTheme = async () => {
-    theme === "ligthTheme"
-      ? dispatch(darkThemeReducer())
-      : dispatch(ligthThemeReducer());
+    theme === "ligthTheme" ? dispatch(darkTheme()) : dispatch(lightTheme());
   };
   return (
     <>

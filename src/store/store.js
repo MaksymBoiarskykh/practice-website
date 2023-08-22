@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from "redux";
-import { themeReducer } from "./themeReducer";
+import { sliceTheme } from "./themeSlice";
 
 const rootReducer = combineReducers({
-  theme: themeReducer,
+  theme: sliceTheme,
 });
 export const store = createStore(rootReducer);

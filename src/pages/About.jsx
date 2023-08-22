@@ -22,8 +22,6 @@ export const About = () => {
     getUsers();
   }, [page]);
 
-  console.log(posts);
-
   if (isError) {
     return (
       <>
