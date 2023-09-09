@@ -8,7 +8,8 @@ export const usersData = async (usersGender = "", limit = 1) => {
       gender: usersGender,
     },
   });
-  if (!response.ok) {
+
+  if (response.status !== 200) {
     throw new Error("invalid response");
   }
   return response.data;

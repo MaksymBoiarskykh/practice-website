@@ -8,7 +8,8 @@ export const postsData = async (page, limit = 7, url = link) => {
       _page: page,
     },
   });
-  if (!response.ok) {
+
+  if (response.status !== 200) {
     throw new Error("invalid response");
   }
   return response.data;
